@@ -25,8 +25,8 @@ Life Life::cross(const Life& other) const {
     return child;
 }
 const unsigned int Life::dnaMatch(int c, const DNA& other) const {
-    
-    return 0;
+    if (c < 0 || c >= NChromo) return 0u;
+    return dna[c].matchDNA(other);
 }
 
 }   // namespace csen79
