@@ -15,7 +15,7 @@ DNA::DNA(unsigned int v) {
 
 bool DNA::getCode(const int i) const {
     if (i < 0 || i >= nCode) return false;
-    return (static_cast<unsigned int>(codes) >> i) && 1U;
+    return (static_cast<unsigned int>(codes) >> i) & 1U;
 }
 
 void DNA::setCode(const int i, bool v) {
