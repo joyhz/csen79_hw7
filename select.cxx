@@ -1,5 +1,6 @@
 /*
- * Sin-Yaw Wang <swang24@scu.edu>
+ * Names: Ashley Kaur, Ryan Vattuone, Joy Zhu
+ * Emails: akaur3@scu.edu, rvattuone@scu.edu, jhzhu@scu.edu
  */
 #include <bitset>
 #include <vector>
