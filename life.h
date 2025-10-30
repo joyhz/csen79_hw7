@@ -1,3 +1,7 @@
+/*
+ * Names: Ashley Kaur, Ryan Vattuone, Joy Zhu
+ * Emails: akaur3@scu.edu, rvattuone@scu.edu, jhzhu@scu.edu
+ */
 #ifndef LIFE_H
 #define LIFE_H
 
