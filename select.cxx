@@ -16,7 +16,7 @@ namespace csen79 {
 
 Select::Select(): favors{0x0f, 0xf0} {
     for (int c = 0; c < Life::NChromo; c++) 
-        maxMatches[c] = favors[c].count();
+        maxMatches[c] = static_cast<int>(favors[c].size());
 }
 
 /*
