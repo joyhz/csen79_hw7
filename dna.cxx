@@ -21,6 +21,7 @@ bool DNA::getCode(const int i) const {
      * bit i = 0 --< result is 0, false
     */
     return (static_cast<unsigned int>(codes) >> i) & 1U;    // the unsigned short might work here too
+    //return (codes >> i) & 1U;    // using unsigned short
 }
 
 void DNA::setCode(const int i, bool v) {
