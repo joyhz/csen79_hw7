@@ -10,12 +10,12 @@ namespace csen79 {
 
 // Student to implement all of these member functions
 DNA::DNA(unsigned int v) {
-
+    codes = static_cast<Gene>(v) & static_cast<Gene>(mask);
 }
 
 bool DNA::getCode(const int i) const {
-
-    return true;
+    if (i < 0 || i >= nCode) return false;
+    return (static_cast<unsigned int>(codes) >> i) && 1U;
 }
 
 void DNA::setCode(const int i, bool v) {
