@@ -46,8 +46,8 @@ void Arena::evolve() {
 
     population.clear();     // effectively wipe off the old generation
     // Add back winners, then their offsprings
-    int i;
-    for (i = 0; i < winners.size(); i++)
+    size_t i;
+    for (i = 0; i < winners.size(); ++i)
         population.push_back(winners[i]);
     for (; i < NPop; i++) {
         int p1 = rand_int(0, static_cast<int>(winners.size()) - 1);
