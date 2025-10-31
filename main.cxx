@@ -28,6 +28,7 @@ int main() {
     Arena tribe;    // constructor populates them with random "genes."
     double avgScore;
     double maturity;
+    int maxGenerations = 10000;    // Setting a limit for how long this loops in case the evolution never converges
     do {
         maturity = tribe.matured();
         tribe.compete();
@@ -37,7 +38,7 @@ int main() {
             ", Average score: " << std::setw(8) << std::fixed << std::setprecision(4) << avgScore << 
             ", Maturity: " << maturity << std::endl;
         tribe.evolve();
-    } while (maturity <= Arena::MATURITY);
+    } while ((maturity <= Arena::MATURITY) && (generation < maxGenerations));
     // There needs a way to display the end population.
     return 0;
 }
