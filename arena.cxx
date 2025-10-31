@@ -43,7 +43,7 @@ void Arena::evolve() {
     long sumScore = 0;
     for (auto& individual : population)
         sumScore += individual.getScore();
-    avgScore = static_cast<double>(sumScore) / static_cast<double>(NPop);   // average score
+    avgScore = static_cast<double>(sumScore) / static_cast<double>(NPop);
     for (auto& individual : population)
         if (static_cast<double>(individual.getScore()) >= avgScore)
             winners.push_back(individual);  // yes, make a copy
