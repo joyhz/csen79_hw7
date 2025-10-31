@@ -16,7 +16,7 @@ Life Life::cross(const Life& other) const {
     for(int c = 0; c < NChromo; c++) {
         for(size_t b = 0; b < dna[c].size(); b++) {
             bool use_this = (rand_int(0, 1) == 1);
-            bool bit = use_this ? dna[c].getCode(static_cast<int>(b)) : other.dna.getCode(static_cast<int>(b));
+            bool bit = use_this ? dna[c].getCode(static_cast<int>(b)) : other.dna[c].getCode(static_cast<int>(b));
             child.dna[c].setCode(static_cast<int>(b), bit);
         }
     }
